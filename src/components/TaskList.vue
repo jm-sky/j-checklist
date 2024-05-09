@@ -1,29 +1,12 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { useStorage, useSorted } from '@vueuse/core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import TaskListHeader from './TaskListHeader.vue';
 import TaskListItem from './TaskListItem.vue';
-import DateButton from './DateButton.vue';
 import TaskListForm from './TaskListForm.vue';
-import { Task, taskSerializer, type ITaskInitData } from '@/models/task.model';
+import { Task, taskSerializer } from '@/models/task.model';
 
 const tasks = useStorage<Task[]>('tasks', [], localStorage, { serializer: taskSerializer });
-
-const newTask = ref<ITaskInitData>({
-  title: 'Drink some coffee',
-  dueDate: null,
-});
-
-const onSubmit = () => {
-  tasks.value.unshift(Task.create({
-    ...newTask.value,
-    dueDate: newTask.value.dueDate,
-  }));
-  newTask.value.title = 'Drink more coffee';
-  newTask.value.dueDate = null;
-};
 
 const tasksSorted = useSorted(tasks, (a, b): number => (a.isDone ? 1 : 0) - (b.isDone ? 1 : 0));
 const tasksDone = computed<Task[]>(() => tasks.value.filter(task => task.isDone));
