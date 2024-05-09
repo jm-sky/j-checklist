@@ -1,35 +1,72 @@
-@import './base.css';
+@import "tailwindcss";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@theme {
+  --color-primary: hsl(199, 89%, 48%);
+  --color-primary-50: hsl(204, 100%, 97%);
+  --color-primary-100: hsl(204, 94%, 94%);
+  --color-primary-200: hsl(201, 94%, 86%);
+  --color-primary-300: hsl(199, 95%, 74%);
+  --color-primary-400: hsl(198, 93%, 60%);
+  --color-primary-500: hsl(199, 89%, 48%);
+  --color-primary-600: hsl(200, 98%, 39%);
+  --color-primary-700: hsl(201, 96%, 32%);
+  --color-primary-800: hsl(201, 90%, 27%);
+  --color-primary-900: hsl(202, 80%, 24%);
+  --color-primary-950: hsl(204, 80%, 16%);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+body {
+  --bg-start: var(--color-black);
+  --bg-end: color-mix(in hsl, var(--color-primary-950), black 30%);
+  --bg-light: var(--color-white);
+
+  color: hsl(204, 80%, 16%);
+
+  @apply min-h-screen bg-black text-white;
+
+  background: linear-gradient(to bottom, transparent, var(--bg-end)), var(--bg-start)
+              conic-gradient(at 50% -1rem,
+                color-mix(in hsl, var(--bg-start), transparent 50%),
+                color-mix(in hsl, var(--bg-light), transparent 50%),
+                color-mix(in hsl, var(--bg-start), transparent 50%)
+              );
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+@layer components {
+  .btn {
+    @apply bg-primary-500/50 text-white px-3 py-1 text-sm font-bold;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+@layer components {
+  progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+  
+    @apply transition-[width] duration-500;
+    @apply rounded bg-primary-950/50;
+    @apply bg-gradient-to-b from-primary-950/50 to-primary-900/50;
+    @apply shadow;
   }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  
+  progress[value]::-webkit-progress-bar {
+    @apply transition-[width] duration-500;
+    @apply rounded bg-primary-950/50;
+    @apply bg-gradient-to-b from-primary-950/50 to-primary-900/50;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    @apply transition-[width] duration-500;
+    @apply rounded bg-primary/75;
+    @apply bg-gradient-to-b from-primary/85 to-primary-900/85;
+  
+  }
+  
+  progress[value]::-moz-progress-bar {
+    @apply transition-[width] duration-500;
+    @apply rounded bg-primary/75;
+    @apply bg-gradient-to-b from-primary/85 to-primary-900/85;
   }
 }

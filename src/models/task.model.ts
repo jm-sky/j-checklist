@@ -1,6 +1,16 @@
+import dayjs from 'dayjs';
+
 export interface ITaskInitData {
   title: string
   dueDate?: Date
+}
+
+export interface ITaskJson {
+  id?: string
+  title: string
+  dueDate?: string | null
+  doneDate?: string | null
+  createdAt: string
 }
 
 export interface ITask {
@@ -26,6 +36,16 @@ export class Task implements ITask {
     this.createdAt = payload.createdAt;
   }
 
+  static fromJson(payload: ITaskJson): Task {
+    return new this({
+      id: payload.id,
+      title: payload.title,
+      dueDate: payload.dueDate ? dayjs(payload.dueDate).toDate() : null,
+      doneDate: payload.doneDate ? dayjs(payload.doneDate).toDate() : null,
+      createdAt: dayjs(payload.createdAt).toDate(),
+    });
+  }
+
   static create(payload: ITaskInitData): Task {
     return new this({
       id: window.crypto.randomUUID(),
@@ -40,3 +60,12 @@ export class Task implements ITask {
     return !!this.doneDate;
   }
 }
+
+export const taskSerializer = {
+  read: (v: any) => {
+    const parsed: ITaskJson[] | null = JSON.parse(v);
+
+    return parsed?.map(item => Task.fromJson(item)) ?? [];
+  },
+  write: (v: any) => JSON.stringify(v),
+};
