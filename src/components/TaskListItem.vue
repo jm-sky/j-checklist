@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { faCircle, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faCalendar } from '@fortawesome/free-regular-svg-icons';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faCalendar, faCircle } from '@fortawesome/free-regular-svg-icons';
 import { faEdit } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { ref } from 'vue';
@@ -29,11 +29,11 @@ const save = () => {
 
 <template>
   <div
-    :class="[{ 'opacity-50': task.isDone }, task.isOverdue ? 'bg-red-800/40 border-red-500/50' : 'border-primary-500/50 bg-primary-800/40']"
+    :class="[{ 'scale-105': isEditing }, { 'opacity-50': task.isDone }, task.isOverdue ? 'bg-red-800/40 border-red-500/50' : 'border-primary-500/50 bg-primary-800/40']"
     class="group flex flex-row gap-3 items-center justify-between border px-3 py-2.5 rounded-lg shadow-lg relative"
   >
     <button class="cursor-pointer text-white/85 hover:text-white" @click="toggle()" data-tooltip="Done/Undone">
-      <FontAwesomeIcon v-if="task.isDone" :icon="faCheck" fixed-width />
+      <FontAwesomeIcon v-if="task.isDone" :icon="faCheckCircle" fixed-width />
       <FontAwesomeIcon v-else :icon="faCircle" fixed-width />
     </button>
 
