@@ -1,6 +1,9 @@
 # j-checklist
 
-This template should help get you started developing with Vue 3 in Vite.
+Simple todo app made with Vue & Vite with TailwindCSS & Font-Awesome.
+
+![obraz](https://github.com/jm-sky/j-vue-todo/assets/17783569/2503857f-3a8b-49ba-b4e3-02a87a179e64)
+
 
 ## Recommended IDE Setup
 
