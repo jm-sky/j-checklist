@@ -70,3 +70,21 @@ body {
     @apply bg-gradient-to-b from-primary/85 to-primary-900/85;
   }
 }
+
+@layer components {
+  [data-tooltip] {
+    @apply relative;
+  }
+  
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    @apply bg-black/75 text-white text-xs whitespace-nowrap px-2 py-1 rounded;
+    @apply absolute top-2 left-1/2 -translate-x-1/2 -translate-y-full;
+    @apply opacity-0;
+    transition: all .3s ease-in-out .3s;
+  }
+  
+  [data-tooltip]:hover::after {
+    @apply opacity-85 top-0;
+  }
+}

@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 
 export interface ITaskInitData {
   title: string
-  dueDate?: Date
+  dueDate: string | null
 }
 
 export interface ITaskJson {
@@ -50,7 +50,7 @@ export class Task implements ITask {
     return new this({
       id: window.crypto.randomUUID(),
       title: payload.title,
-      dueDate: payload.dueDate ?? null,
+      dueDate: payload.dueDate ? dayjs(payload.dueDate).toDate() : null,
       doneDate: null,
       createdAt: new Date(),
     });
@@ -58,6 +58,21 @@ export class Task implements ITask {
 
   get isDone(): boolean {
     return !!this.doneDate;
+  }
+
+  get isOverdue(): boolean {
+    if (this.isDone) return false;
+    if (!this.dueDate) return false;
+
+    return this.dueDate < new Date();
+  }
+
+  get dueDateString(): string | null {
+    return this.dueDate?.toDateString() ?? null;
+  }
+
+  set dueDateString(stringDate: string | null) {
+    this.dueDate = stringDate ? dayjs(stringDate).toDate() : null;
   }
 }
 
