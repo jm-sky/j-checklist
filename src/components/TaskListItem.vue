@@ -15,15 +15,15 @@ const toggle = () => {
 </script>
 
 <template>
-  <div class="flex flex-row gap-2 items-center justify-between border border-primary-500/50 px-3 py-2 rounded-lg bg-primary-800/40 shadow-lg">
-    <div :class="{ 'line-through': task.isDone }">
+  <div class="flex flex-row gap-3 items-center justify-between border border-primary-500/50 px-3 py-2 rounded-lg bg-primary-800/40 shadow-lg">
+    <button class="cursor-pointer" @click="toggle()">
+      <FontAwesomeIcon v-if="task.isDone" :icon="faCheck" />
+      <FontAwesomeIcon v-else :icon="faCircle" />
+    </button>
+    <div :class="{ 'line-through': task.isDone }" class="w-full">
       {{ task.title }}
     </div>
     <div class="flex flex-row gap-3 text-sm items-center">
-      <button class="cursor-pointer" @click="toggle()">
-        <FontAwesomeIcon v-if="task.isDone" :icon="faCheck" />
-        <FontAwesomeIcon v-else :icon="faCircle" />
-      </button>
       <button class="cursor-pointer" @click="emit('delete')">
         <FontAwesomeIcon :icon="faTimes" />
       </button>
