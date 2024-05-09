@@ -13,7 +13,7 @@ const newTask = ref<ITaskInitData>({
 });
 
 const onSubmit = () => {
-  tasks.value.push(Task.create({...newTask.value}));
+  tasks.value.unshift(Task.create({...newTask.value}));
   newTask.value.title = '';
 };
 
@@ -31,7 +31,7 @@ const progress = computed(() => Math.round(tasksDone.value.length / tasks.value.
           <div class="font-bold text-2xl">Tasks</div>
           <div class="font-semibold">You have something to do!</div>
         </div>
-        <div class="size-20 font-bold p-1 text-lg rounded-full text-white grid place-items-center bg-gradient-to-b from-primary/75 to-primary-800/75 shadow">
+        <div class="size-20 font-bold p-1 text-lg rounded-full text-white grid place-items-center bg-primary/50 bg-gradient-to-b from-primary/75 to-primary-800/75 shadow">
           {{ progress }}%
         </div>
       </div>
@@ -46,7 +46,19 @@ const progress = computed(() => Math.round(tasksDone.value.length / tasks.value.
     </form>
 
     <div class="flex flex-col gap-2">
-      <TaskListItem v-for="(task, index) in tasksSorted" :key="task.id" v-model:task="tasks[index]" @delete="tasks.splice(index, 1)" />
+      <TransitionGroup
+        enter-from-class="absolute translate-x-4 opacity-0"
+        enter-active-class="transform-gpu transition-all"
+        leave-to-class="-translate-x-4 opacity-0"
+        leave-active-class="absolute transform-gpu transition-all"
+      >
+        <TaskListItem
+          v-for="(task, index) in tasksSorted"
+          :key="task.id"
+          v-model:task="tasks[index]"
+          @delete="tasks.splice(index, 1)"
+        />
+      </TransitionGroup>
     </div>
   </div>
 </template>
