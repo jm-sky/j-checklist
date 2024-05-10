@@ -3,7 +3,7 @@ import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle, faCalendar, faCircle } from '@fortawesome/free-regular-svg-icons';
 import { faEdit } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import dayjs from 'dayjs';
 import DateButton from './DateButton.vue';
 import InputText from './InputText.vue';
@@ -37,6 +37,8 @@ const save = () => {
   task.value.dueDate = draft.value.dueDate ? dayjs(draft.value.dueDate).toDate() : null;
   isEditing.value = false;
 };
+
+const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'Mark as done');
 </script>
 
 <template>
@@ -48,7 +50,7 @@ const save = () => {
     ]"
     class="group flex flex-row gap-3 items-center justify-between border px-3 py-2.5 rounded-lg shadow-lg relative  hover:ring"
   >
-    <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleIsDone()" data-tooltip="Done/Undone">
+    <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleIsDone()" :data-tooltip="doneButtonLabel" :aria-label="doneButtonLabel">
       <FontAwesomeIcon v-if="task.isDone" :icon="faCheckCircle" fixed-width />
       <FontAwesomeIcon v-else :icon="faCircle" fixed-width />
     </button>
@@ -66,9 +68,10 @@ const save = () => {
         v-model="draft.title"
         class="w-full"
         :error="task.isOverdue"
+        aria-label="Task title"
         @keydown.enter=save()
       />
-      <DateButton v-model="draft.dueDate" :class="task.isOverdue ? 'text-red-600' : 'text-primary'" />
+      <DateButton v-model="draft.dueDate" :class="task.isOverdue ? 'text-red-600' : 'text-primary'" label="Task due date" />
     </div>
     
     <div
@@ -76,18 +79,18 @@ const save = () => {
       class="flex flex-row gap-3 text-sm items-center group-hover:opacity-100 transition-opacity delay-300 group-hover:delay-0"
       >
       <template v-if="isEditing">
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleEditing()" data-tooltip="Cancel">
+        <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleEditing()" data-tooltip="Cancel" aria-label="Cancel">
           <FontAwesomeIcon :icon="faTimes" class="scale-90" />
         </button>
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="save()" data-tooltip="Save">
+        <button class="cursor-pointer text-white/85 hover:text-white" @click="save()" data-tooltip="Save" aria-label="Save">
           <FontAwesomeIcon :icon="faCheck" class="scale-90" />
         </button>
       </template>
       <template v-else>
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleEditing()" data-tooltip="Edit">
+        <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleEditing()" data-tooltip="Edit" aria-label="Edit">
           <FontAwesomeIcon :icon="faEdit" class="scale-90" />
         </button>
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="emit('delete')" data-tooltip="Delete">
+        <button class="cursor-pointer text-white/85 hover:text-white" @click="emit('delete')" data-tooltip="Delete" aria-label="Delete">
           <FontAwesomeIcon :icon="faTimes" class="scale-90" />
         </button>
       </template>

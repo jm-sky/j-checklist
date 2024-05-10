@@ -38,6 +38,12 @@ export default defineConfig({
             sizes: '1024x1024',
             type: 'image/png',
           },
+          {
+            src: 'icons//mask-icon.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
         ],
       },
       devOptions: {
