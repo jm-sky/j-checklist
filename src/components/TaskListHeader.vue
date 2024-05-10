@@ -10,7 +10,7 @@ const progress = computed(() => !props.total ? 0 : Math.round(props.totalDone / 
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 p-4 border border-primary/50 rounded-lg bg-primary-900/50 backdrop-blur-md shadow-lg">
+  <div class="flex flex-col gap-2 p-4 border-theme rounded-lg bg-theme backdrop-blur-md shadow-lg">
     <div class="flex flex-row items-center justify-between gap-2">
       <div class="space-y-1">
         <div class="font-bold text-2xl">Tasks</div>

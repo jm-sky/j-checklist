@@ -1,15 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about p-4 rounded-lg border-theme bg-theme shadow">
+    <h1 class="font-bold text-xl mb-4">This is an about page</h1>
+    Work in progress...
   </div>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
