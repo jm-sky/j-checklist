@@ -41,23 +41,27 @@ const save = () => {
 
 <template>
   <div
-    :class="[{ 'scale-105': isEditing }, { 'opacity-50': task.isDone }, task.isOverdue ? 'bg-red-800/40 border-red-500/50' : 'border-primary-500/50 bg-primary-800/40']"
-    class="group flex flex-row gap-3 items-center justify-between border px-3 py-2.5 rounded-lg shadow-lg relative"
+    :class="[
+      { 'scale-105 ring ring-primary': isEditing },
+      { 'opacity-50': task.isDone },
+      task.isOverdue ? 'bg-red-800/40 border-red-500/50 hover:ring-red-500' : 'border-theme bg-theme hover:ring-primary',
+    ]"
+    class="group flex flex-row gap-3 items-center justify-between border px-3 py-2.5 rounded-lg shadow-lg relative  hover:ring"
   >
     <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleIsDone()" data-tooltip="Done/Undone">
       <FontAwesomeIcon v-if="task.isDone" :icon="faCheckCircle" fixed-width />
       <FontAwesomeIcon v-else :icon="faCircle" fixed-width />
     </button>
 
-    <div v-if="!isEditing" :class="{ 'line-through': task.isDone }" class="w-full duration-500">
+    <div v-if="!isEditing" :class="{ 'line-through': task.isDone }" class="flex flex-col sm:flex-row items-center gap-2 w-full duration-500">
       {{ task.title }}
-      <span v-if="task.dueDate" class="ml-2 text-xs font-light border-l pl-2">
+      <span v-if="task.dueDate" class="text-xs font-light sm:border-l sm:pl-2">
         <FontAwesomeIcon :icon="faCalendar" fixed-width />
         {{ task.dueDate?.toDateString() }}
       </span>
     </div>
 
-    <div v-if="isEditing" class="flex flex-row items-stretch justify-stretch gap-2 w-full -my-2 duration-500">
+    <div v-if="isEditing" class="flex flex-col sm:flex-row items-stretch justify-stretch gap-2 w-full -my-2 duration-500">
       <InputText
         v-model="draft.title"
         class="w-full"

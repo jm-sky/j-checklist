@@ -24,13 +24,13 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <form class="sticky top-10 flex flex-row items-stretch gap-2" @submit.prevent="onSubmit()">
+  <form class="sticky top-10 flex flex-row flex-wrap sm:flex-nowrap items-stretch gap-2" @submit.prevent="onSubmit()">
     <InputText
       v-model="newTask.title"
       placeholder="Write something here..."
-      class="w-full shadow"
+      class="w-full shadow min-w-full sm:min-w-0"
     />
-    <DateButton v-model="newTask.dueDate" class="text-primary shadow" />
+    <DateButton v-model="newTask.dueDate" class="text-primary shadow grow sm:grow-0" />
     <button
       :disabled="!newTask?.title.length"
       class="shadow flex items-center justify-center aspect-square p-3 rounded-lg font-bold text-sm cursor-pointer bg-primary/50 hover:opacity-75 disabled:opacity-50 disabled:cursor-not-allowed"

@@ -22,7 +22,7 @@ body {
 
   color: hsl(204, 80%, 16%);
 
-  @apply min-h-screen bg-black text-white;
+  @apply min-h-screen bg-black text-white overflow-x-hidden;
 
   background: linear-gradient(to bottom, transparent, var(--bg-end)), var(--bg-start)
               conic-gradient(at 50% -1rem,
@@ -91,5 +91,15 @@ body {
   
   [data-tooltip]:hover::after {
     @apply opacity-85 top-0;
+  }
+}
+
+@layer utilities {
+  .bg-theme {
+    @apply bg-primary-900/40;
+  }
+
+  .border-theme {
+    @apply border border-primary/50;
   }
 }
