@@ -33,12 +33,12 @@ const onSubmit = () => {
     />
     <DateButton
       v-model="newTask.dueDate"
-      class="text-primary shadow grow sm:grow-0"
+      class="text-brand shadow grow sm:grow-0"
       label="New task due date"
     />
     <button
       :disabled="!newTask?.title.length"
-      class="shadow flex items-center justify-center aspect-square p-3 rounded-lg font-bold text-sm cursor-pointer bg-primary/50 hover:opacity-75 disabled:opacity-50 disabled:cursor-not-allowed"
+      class="shadow flex items-center justify-center aspect-square p-3 rounded-lg font-bold text-sm cursor-pointer bg-brand/50 hover:opacity-75 disabled:opacity-50 disabled:cursor-not-allowed"
       aria-label="Add new task"
     >
       <FontAwesomeIcon :icon="faPlus" fixed-width />

@@ -16,7 +16,7 @@ const progress = computed(() => !props.total ? 0 : Math.round(props.totalDone / 
         <div class="font-bold text-2xl">Tasks</div>
         <div class="font-semibold">You have something to do!</div>
       </div>
-      <div class="size-20 font-bold p-1 text-lg rounded-full text-white grid place-items-center bg-primary/50 bg-gradient-to-b from-primary/75 to-primary-800/75 shadow">
+      <div class="size-20 font-bold p-1 text-lg rounded-full text-white grid place-items-center bg-brand/50 bg-gradient-to-b from-brand/75 to-brand-800/75 shadow">
         {{ progress }}%
       </div>
     </div>

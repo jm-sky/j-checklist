@@ -44,9 +44,9 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
 <template>
   <div
     :class="[
-      { 'scale-105 ring ring-primary': isEditing },
+      { 'scale-105 ring ring-brand': isEditing },
       { 'opacity-50': task.isDone },
-      task.isOverdue ? 'bg-red-800/40 border-red-500/50 hover:ring-red-500' : 'border-theme bg-theme hover:ring-primary',
+      task.isOverdue ? 'bg-red-800/40 border-red-500/50 hover:ring-red-500' : 'border-theme bg-theme hover:ring-brand',
     ]"
     class="group flex flex-row gap-3 items-center justify-between border px-3 py-2.5 rounded-lg shadow-lg relative  hover:ring"
   >
@@ -71,7 +71,7 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
         aria-label="Task title"
         @keydown.enter=save()
       />
-      <DateButton v-model="draft.dueDate" :class="task.isOverdue ? 'text-red-600' : 'text-primary'" label="Task due date" />
+      <DateButton v-model="draft.dueDate" :class="task.isOverdue ? 'text-red-600' : 'text-brand'" label="Task due date" />
     </div>
     
     <div
