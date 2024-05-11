@@ -1,6 +1,8 @@
 # j-checklist
 
-Simple todo app made with Vue & Vite with TailwindCSS & Font-Awesome.
+Simple todo app made with Vue & Vite with TailwindCSS & Font-Awesome. It uses `localStorage` to persist tasks. 
+
+It's also a PWA (Progressive Web Spp) so You could install it on Android. 
 
 ![obraz](https://github.com/jm-sky/j-vue-todo/assets/17783569/2503857f-3a8b-49ba-b4e3-02a87a179e64)
 
@@ -8,10 +10,6 @@ Simple todo app made with Vue & Vite with TailwindCSS & Font-Awesome.
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
 ## Customize configuration
 
