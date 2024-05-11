@@ -79,18 +79,18 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
       class="flex flex-row gap-3 text-sm items-center group-hover:opacity-100 transition-opacity delay-300 group-hover:delay-0"
       >
       <template v-if="isEditing">
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleEditing()" data-tooltip="Cancel" aria-label="Cancel">
+        <button class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10" @click="toggleEditing()" data-tooltip="Cancel" aria-label="Cancel">
           <FontAwesomeIcon :icon="faTimes" class="scale-90" />
         </button>
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="save()" data-tooltip="Save" aria-label="Save">
+        <button class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10" @click="save()" data-tooltip="Save" aria-label="Save">
           <FontAwesomeIcon :icon="faCheck" class="scale-90" />
         </button>
       </template>
       <template v-else>
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="toggleEditing()" data-tooltip="Edit" aria-label="Edit">
+        <button class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10" @click="toggleEditing()" data-tooltip="Edit" aria-label="Edit">
           <FontAwesomeIcon :icon="faEdit" class="scale-90" />
         </button>
-        <button class="cursor-pointer text-white/85 hover:text-white" @click="emit('delete')" data-tooltip="Delete" aria-label="Delete">
+        <button class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10" @click="emit('delete')" data-tooltip="Delete" aria-label="Delete">
           <FontAwesomeIcon :icon="faTimes" class="scale-90" />
         </button>
       </template>

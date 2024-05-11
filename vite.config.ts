@@ -1,7 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig, loadEnv  } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
@@ -12,7 +11,6 @@ export default defineConfig(({ mode }) => {
     base: env.VITE_APP_BASE_URL ?? '/',
     plugins: [
       vue(),
-      tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
         includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
