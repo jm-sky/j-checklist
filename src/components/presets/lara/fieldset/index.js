@@ -12,8 +12,8 @@ export default {
             // Color
             'border border-surface-200 dark:border-surface-700',
             'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-surface-0/80'
-        ]
+            'text-surface-700 dark:text-surface-0/80',
+        ],
     },
     legend: ({ props }) => ({
         class: [
@@ -36,8 +36,8 @@ export default {
             'transition-none',
 
             // States
-            { 'hover:bg-surface-100 hover:border-surface-200 hover:text-surface-900 dark:hover:text-surface-0/80 dark:hover:bg-surface-800/80': props.toggleable }
-        ]
+            { 'hover:bg-surface-100 hover:border-surface-200 hover:text-surface-900 dark:hover:text-surface-0/80 dark:hover:bg-surface-800/80': props.toggleable },
+        ],
     }),
     toggler: ({ props }) => ({
         class: [
@@ -60,18 +60,18 @@ export default {
 
             // Misc
             {
-                'transition-none cursor-pointer overflow-hidden select-none': props.toggleable
-            }
-        ]
+                'transition-none cursor-pointer overflow-hidden select-none': props.toggleable,
+            },
+        ],
     }),
     togglerIcon: {
-        class: 'mr-2 inline-block'
+        class: 'mr-2 inline-block',
     },
     legendTitle: {
-        class: 'flex items-center justify-center leading-none'
+        class: 'flex items-center justify-center leading-none',
     },
     content: {
-        class: 'p-5'
+        class: 'p-5',
     },
     transition: {
         enterFromClass: 'max-h-0',
@@ -79,6 +79,6 @@ export default {
         enterToClass: 'max-h-[1000px]',
         leaveFromClass: 'max-h-[1000px]',
         leaveActiveClass: 'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
-        leaveToClass: 'max-h-0'
-    }
+        leaveToClass: 'max-h-0',
+    },
 };

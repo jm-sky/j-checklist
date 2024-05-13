@@ -12,17 +12,17 @@ export default {
             { 'border-surface-300 dark:border-surface-600': !props.invalid },
 
             // Invalid State
-            { 'border-red-500 dark:border-red-400': props.invalid }
-        ]
+            { 'border-red-500 dark:border-red-400': props.invalid },
+        ],
     }),
     wrapper: {
         class: [
             // Overflow
-            'overflow-auto'
-        ]
+            'overflow-auto',
+        ],
     },
     list: {
-        class: 'py-3 list-none m-0 outline-none'
+        class: 'py-3 list-none m-0 outline-none',
     },
     item: ({ context }) => ({
         class: [
@@ -48,7 +48,7 @@ export default {
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
 
                 'text-primary-highlight-inverse': context.selected,
-                'bg-primary-highlight': context.selected
+                'bg-primary-highlight': context.selected,
             },
 
             //States
@@ -63,8 +63,8 @@ export default {
             // Misc
             'cursor-pointer',
             'overflow-hidden',
-            'whitespace-nowrap'
-        ]
+            'whitespace-nowrap',
+        ],
     }),
     itemgroup: {
         class: [
@@ -80,8 +80,8 @@ export default {
             'bg-surface-0 dark:bg-surface-600/80',
 
             // Misc
-            'cursor-auto'
-        ]
+            'cursor-auto',
+        ],
     },
     header: {
         class: [
@@ -97,11 +97,11 @@ export default {
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-100 dark:bg-surface-800',
-            'border-surface-300 dark:border-surface-600'
-        ]
+            'border-surface-300 dark:border-surface-600',
+        ],
     },
     filtercontainer: {
-        class: 'relative'
+        class: 'relative',
     },
     filterinput: {
         class: [
@@ -133,11 +133,11 @@ export default {
             'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Misc
-            'appearance-none'
-        ]
+            'appearance-none',
+        ],
     },
     filtericon: {
-        class: ['absolute', 'top-1/2 right-3', '-mt-2']
+        class: ['absolute', 'top-1/2 right-3', '-mt-2'],
     },
     emptymessage: {
         class: [
@@ -149,7 +149,7 @@ export default {
 
             // Color
             'text-surface-800 dark:text-white/80',
-            'bg-transparent'
-        ]
-    }
+            'bg-transparent',
+        ],
+    },
 };

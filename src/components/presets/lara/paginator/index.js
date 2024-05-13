@@ -12,8 +12,8 @@ export default {
 
             // Color
             'bg-surface-0 dark:bg-surface-800',
-            'text-surface-500 dark:text-white/60'
-        ]
+            'text-surface-500 dark:text-white/60',
+        ],
     },
     firstpagebutton: ({ context }) => ({
         class: [
@@ -35,7 +35,7 @@ export default {
             // State
             {
                 'hover:bg-surface-50 dark:hover:bg-surface-700/70': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled,
             },
 
             // Transition
@@ -43,8 +43,8 @@ export default {
 
             // Misc
             'user-none overflow-hidden',
-            { 'cursor-default pointer-events-none opacity-60': context.disabled }
-        ]
+            { 'cursor-default pointer-events-none opacity-60': context.disabled },
+        ],
     }),
     previouspagebutton: ({ context }) => ({
         class: [
@@ -66,7 +66,7 @@ export default {
             // State
             {
                 'hover:bg-surface-50 dark:hover:bg-surface-700/70': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled,
             },
 
             // Transition
@@ -74,8 +74,8 @@ export default {
 
             // Misc
             'user-none overflow-hidden',
-            { 'cursor-default pointer-events-none opacity-60': context.disabled }
-        ]
+            { 'cursor-default pointer-events-none opacity-60': context.disabled },
+        ],
     }),
     nextpagebutton: ({ context }) => ({
         class: [
@@ -97,7 +97,7 @@ export default {
             // State
             {
                 'hover:bg-surface-50 dark:hover:bg-surface-700/70': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled,
             },
 
             // Transition
@@ -105,8 +105,8 @@ export default {
 
             // Misc
             'user-none overflow-hidden',
-            { 'cursor-default pointer-events-none opacity-60': context.disabled }
-        ]
+            { 'cursor-default pointer-events-none opacity-60': context.disabled },
+        ],
     }),
     lastpagebutton: ({ context }) => ({
         class: [
@@ -128,7 +128,7 @@ export default {
             // State
             {
                 'hover:bg-surface-50 dark:hover:bg-surface-700/70': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled,
             },
 
             // Transition
@@ -136,8 +136,8 @@ export default {
 
             // Misc
             'user-none overflow-hidden',
-            { 'cursor-default pointer-events-none opacity-60': context.disabled }
-        ]
+            { 'cursor-default pointer-events-none opacity-60': context.disabled },
+        ],
     }),
     pagebutton: ({ context }) => ({
         class: [
@@ -156,13 +156,13 @@ export default {
             // Color
             'text-surface-500 dark:text-white/80',
             {
-                'bg-primary-highlight border-primary-highlight  text-primary-highlight-inverse': context.active
+                'bg-primary-highlight border-primary-highlight  text-primary-highlight-inverse': context.active,
             },
 
             // State
             {
                 'hover:bg-surface-50 dark:hover:bg-surface-700/70': !context.disabled && !context.active,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled,
             },
 
             // Transition
@@ -170,8 +170,8 @@ export default {
 
             // Misc
             'user-none overflow-hidden',
-            { 'cursor-default pointer-events-none opacity-60': context.disabled }
-        ]
+            { 'cursor-default pointer-events-none opacity-60': context.disabled },
+        ],
     }),
     rowperpagedropdown: {
         root: ({ props, state }) => ({
@@ -202,8 +202,8 @@ export default {
                 // Misc
                 'cursor-pointer',
                 'select-none',
-                { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled }
-            ]
+                { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled },
+            ],
         }),
         input: {
             class: [
@@ -238,8 +238,8 @@ export default {
                 'cursor-pointer',
                 'overflow-hidden overflow-ellipsis',
                 'whitespace-nowrap',
-                'appearance-none'
-            ]
+                'appearance-none',
+            ],
         },
         trigger: {
             class: [
@@ -256,8 +256,8 @@ export default {
 
                 // Shape
                 'rounded-tr-md',
-                'rounded-br-md'
-            ]
+                'rounded-br-md',
+            ],
         },
         panel: {
             class: [
@@ -272,8 +272,8 @@ export default {
                 // Color
                 'bg-surface-0 dark:bg-surface-800',
                 'text-surface-800 dark:text-white/80',
-                'dark:border-surface-700'
-            ]
+                'dark:border-surface-700',
+            ],
         },
         wrapper: {
             class: [
@@ -281,11 +281,11 @@ export default {
                 'max-h-[200px]',
 
                 // Misc
-                'overflow-auto'
-            ]
+                'overflow-auto',
+            ],
         },
         list: {
-            class: 'py-3 list-none m-0'
+            class: 'py-3 list-none m-0',
         },
         item: ({ context }) => ({
             class: [
@@ -320,13 +320,13 @@ export default {
                 // Misc
                 'cursor-pointer',
                 'overflow-hidden',
-                'whitespace-nowrap'
-            ]
-        })
+                'whitespace-nowrap',
+            ],
+        }),
     },
     jumptopageinput: {
         root: {
-            class: 'inline-flex mx-2'
+            class: 'inline-flex mx-2',
         },
         input: {
             root: {
@@ -366,10 +366,10 @@ export default {
                     'cursor-pointer',
                     'overflow-hidden overflow-ellipsis',
                     'whitespace-nowrap',
-                    'appearance-none'
-                ]
-            }
-        }
+                    'appearance-none',
+                ],
+            },
+        },
     },
     jumptopagedropdown: {
         root: ({ props, state }) => ({
@@ -397,8 +397,8 @@ export default {
                 // Misc
                 'cursor-pointer',
                 'select-none',
-                { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled }
-            ]
+                { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled },
+            ],
         }),
         input: {
             class: [
@@ -433,8 +433,8 @@ export default {
                 'cursor-pointer',
                 'overflow-hidden overflow-ellipsis',
                 'whitespace-nowrap',
-                'appearance-none'
-            ]
+                'appearance-none',
+            ],
         },
         trigger: {
             class: [
@@ -451,8 +451,8 @@ export default {
 
                 // Shape
                 'rounded-tr-md',
-                'rounded-br-md'
-            ]
+                'rounded-br-md',
+            ],
         },
         panel: {
             class: [
@@ -467,8 +467,8 @@ export default {
                 // Color
                 'bg-surface-0 dark:bg-surface-800',
                 'text-surface-800 dark:text-white/80',
-                'dark:border-surface-700'
-            ]
+                'dark:border-surface-700',
+            ],
         },
         wrapper: {
             class: [
@@ -476,11 +476,11 @@ export default {
                 'max-h-[200px]',
 
                 // Misc
-                'overflow-auto'
-            ]
+                'overflow-auto',
+            ],
         },
         list: {
-            class: 'py-3 list-none m-0'
+            class: 'py-3 list-none m-0',
         },
         item: ({ context }) => ({
             class: [
@@ -515,14 +515,14 @@ export default {
                 // Misc
                 'cursor-pointer',
                 'overflow-hidden',
-                'whitespace-nowrap'
-            ]
-        })
+                'whitespace-nowrap',
+            ],
+        }),
     },
     start: {
-        class: 'mr-auto'
+        class: 'mr-auto',
     },
     end: {
-        class: 'ml-auto'
-    }
+        class: 'ml-auto',
+    },
 };

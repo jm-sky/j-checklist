@@ -4,6 +4,12 @@ import { faTasks } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+
+import { useDark, useToggle } from '@vueuse/core';
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+toggleDark(true);
 </script>
 
 <template>
@@ -12,9 +18,28 @@ const { t } = useI18n();
       <FontAwesomeIcon :icon="faTasks" />
       J-CheckList
     </h1>
-    <nav class="flex flex-row items-center justify-end gap-4">
-      <RouterLink to="/" class="py-1 text-brand-300 hover:text-brand-100 border-b-2 border-transparent" exact-active-class="text-white border-white">{{ t('page.Home') }}</RouterLink>
-      <RouterLink to="/config" class="py-1 text-brand-300 hover:text-brand-100 border-b-2 border-transparent" exact-active-class="text-white border-white">{{ t('page.Config') }}</RouterLink>
+    <nav class="flex flex-row items-center justify-end gap-4 -mb-1">
+      <RouterLink
+        to="/"
+        class="py-1 text-brand-300 hover:text-brand-100 border-b-2 border-transparent"
+        exact-active-class="text-white border-white"
+      >
+        {{ t('page.Home') }}
+      </RouterLink>
+      <RouterLink
+        to="/config"
+        class="py-1 text-brand-300 hover:text-brand-100 border-b-2 border-transparent"
+        exact-active-class="text-white border-white"
+      >
+        {{ t('page.Config') }}
+      </RouterLink>
+
+      <!-- <Button
+        :icon="isDark ? 'fa fa-moon' : 'fa fa-sun'"
+        size="small"
+        outlined
+        @click="toggleDark()"
+      /> -->
     </nav>
   </header>
 </template>

@@ -12,7 +12,7 @@ export default {
             { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             // Color and Background
-            'bg-surface-0 dark:bg-surface-900',
+            'bg-surface-0 dark:bg-primary-950/75',
 
             'border border-surface-300',
             { 'dark:border-surface-700': parent.instance.$name != 'InputGroup' },
@@ -33,8 +33,8 @@ export default {
             // Misc
             'cursor-pointer',
             'select-none',
-            { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled }
-        ]
+            { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled },
+        ],
     }),
     input: ({ props, parent }) => ({
         class: [
@@ -53,7 +53,7 @@ export default {
 
             // Sizing and Spacing
             'w-[1%]',
-            'p-3',
+            'px-3 p-2',
             { 'pr-7': props.showClear },
 
             //Shape
@@ -74,8 +74,8 @@ export default {
             'cursor-pointer',
             'overflow-hidden overflow-ellipsis',
             'whitespace-nowrap',
-            'appearance-none'
-        ]
+            'appearance-none',
+        ],
     }),
     trigger: {
         class: [
@@ -92,8 +92,8 @@ export default {
 
             // Shape
             'rounded-tr-md',
-            'rounded-br-md'
-        ]
+            'rounded-br-md',
+        ],
     },
     panel: {
         class: [
@@ -106,10 +106,10 @@ export default {
             'shadow-md',
 
             // Color
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-primary-950/85',
             'text-surface-800 dark:text-white/80',
-            'dark:border-surface-700'
-        ]
+            'dark:border-surface-700',
+        ],
     },
     wrapper: {
         class: [
@@ -117,11 +117,11 @@ export default {
             'max-h-[200px]',
 
             // Misc
-            'overflow-auto'
-        ]
+            'overflow-auto',
+        ],
     },
     list: {
-        class: 'py-3 list-none m-0'
+        class: 'py-3 list-none m-0',
     },
     item: ({ context }) => ({
         class: [
@@ -147,7 +147,7 @@ export default {
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
 
                 'text-primary-highlight-inverse': context.selected,
-                'bg-primary-highlight': context.selected
+                'bg-primary-highlight': context.selected,
             },
 
             //States
@@ -163,8 +163,8 @@ export default {
             { 'pointer-events-none cursor-default': context.disabled },
             { 'cursor-pointer': !context.disabled },
             'overflow-hidden',
-            'whitespace-nowrap'
-        ]
+            'whitespace-nowrap',
+        ],
     }),
     itemgroup: {
         class: [
@@ -180,8 +180,8 @@ export default {
             'bg-surface-0 dark:bg-surface-600/80',
 
             // Misc
-            'cursor-auto'
-        ]
+            'cursor-auto',
+        ],
     },
     emptymessage: {
         class: [
@@ -193,8 +193,8 @@ export default {
 
             // Color
             'text-surface-800 dark:text-white/80',
-            'bg-transparent'
-        ]
+            'bg-transparent',
+        ],
     },
     header: {
         class: [
@@ -209,12 +209,12 @@ export default {
 
             // Color
             'text-surface-700 dark:text-white/80',
-            'bg-surface-100 dark:bg-surface-800',
-            'border-surface-300 dark:border-surface-700'
-        ]
+            'bg-surface-100 dark:bg-primary-950/85',
+            'border-surface-300 dark:border-surface-700',
+        ],
     },
     filtercontainer: {
-        class: 'relative'
+        class: 'relative',
     },
     filterinput: {
         class: [
@@ -246,11 +246,11 @@ export default {
             'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Misc
-            'appearance-none'
-        ]
+            'appearance-none',
+        ],
     },
     filtericon: {
-        class: ['absolute', 'top-1/2 right-3', '-mt-2']
+        class: ['absolute', 'top-1/2 right-3', '-mt-2'],
     },
     clearicon: {
         class: [
@@ -263,16 +263,16 @@ export default {
             'right-12',
 
             // Spacing
-            '-mt-2'
-        ]
+            '-mt-2',
+        ],
     },
     loadingicon: {
-        class: 'text-surface-400 dark:text-surface-500 animate-spin'
+        class: 'text-surface-400 dark:text-surface-500 animate-spin',
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
         enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
         leaveActiveClass: 'transition-opacity duration-100 ease-linear',
-        leaveToClass: 'opacity-0'
-    }
+        leaveToClass: 'opacity-0',
+    },
 };

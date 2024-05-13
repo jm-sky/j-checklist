@@ -3,9 +3,9 @@ export default {
         class: [
             'flex',
             {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
-            }
-        ]
+                'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+            },
+        ],
     }),
     container: ({ state, props, parent }) => ({
         class: [
@@ -49,12 +49,12 @@ export default {
 
             // Misc
             'cursor-text overflow-hidden',
-            'appearance-none'
-        ]
+            'appearance-none',
+        ],
     }),
 
     inputtoken: {
-        class: ['py-1.5 px-0', 'inline-flex flex-auto']
+        class: ['py-1.5 px-0', 'inline-flex flex-auto'],
     },
     input: {
         class: [
@@ -74,8 +74,8 @@ export default {
 
             // Color
             'text-surface-700 dark:text-white/80',
-            'bg-transparent'
-        ]
+            'bg-transparent',
+        ],
     },
     token: {
         class: [
@@ -90,11 +90,11 @@ export default {
 
             // Colors
             'text-surface-700 dark:text-white/70',
-            'bg-surface-200 dark:bg-surface-700'
-        ]
+            'bg-surface-200 dark:bg-surface-700',
+        ],
     },
     label: {
-        class: 'leading-[normal]'
+        class: 'leading-[normal]',
     },
     removeTokenIcon: {
         class: [
@@ -111,7 +111,7 @@ export default {
             'transition duration-200 ease-in-out',
 
             // Misc
-            'cursor-pointer'
-        ]
-    }
+            'cursor-pointer',
+        ],
+    },
 };

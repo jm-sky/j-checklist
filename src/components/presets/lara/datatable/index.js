@@ -7,8 +7,8 @@ export default {
             { 'flex flex-col': props.scrollable && props.scrollHeight === 'flex' },
 
             // Size
-            { 'h-full': props.scrollable && props.scrollHeight === 'flex' }
-        ]
+            { 'h-full': props.scrollable && props.scrollHeight === 'flex' },
+        ],
     }),
     loadingoverlay: {
         class: [
@@ -27,19 +27,19 @@ export default {
             'bg-surface-100/40 dark:bg-surface-800/40',
 
             // Transition
-            'transition duration-200'
-        ]
+            'transition duration-200',
+        ],
     },
     loadingicon: {
-        class: 'w-8 h-8 animate-spin'
+        class: 'w-8 h-8 animate-spin',
     },
     wrapper: ({ props }) => ({
         class: [
             { relative: props.scrollable, 'flex flex-col grow': props.scrollable && props.scrollHeight === 'flex' },
 
             // Size
-            { 'h-full': props.scrollable && props.scrollHeight === 'flex' }
-        ]
+            { 'h-full': props.scrollable && props.scrollHeight === 'flex' },
+        ],
     }),
     header: ({ props }) => ({
         class: [
@@ -54,33 +54,33 @@ export default {
             // Color
             'bg-surface-50 dark:bg-surface-800',
             'border-surface-200 dark:border-surface-700',
-            'text-surface-700 dark:text-white/80'
-        ]
+            'text-surface-700 dark:text-white/80',
+        ],
     }),
     table: {
-        class: 'w-full border-spacing-0 border-separate'
+        class: 'w-full border-spacing-0 border-separate',
     },
     thead: ({ context }) => ({
         class: [
             {
-                'bg-surface-50 dark:bg-surface-800 top-0 z-40 sticky': context.scrollable
-            }
-        ]
+                'bg-surface-50 dark:bg-surface-800 top-0 z-40 sticky': context.scrollable,
+            },
+        ],
     }),
     tbody: ({ instance, context }) => ({
         class: [
             {
-                'sticky z-20': instance.frozenRow && context.scrollable
+                'sticky z-20': instance.frozenRow && context.scrollable,
             },
-            'bg-surface-50 dark:bg-surface-800'
-        ]
+            'bg-surface-50 dark:bg-surface-800',
+        ],
     }),
     tfoot: ({ context }) => ({
         class: [
             {
-                'bg-surface-50 bottom-0 z-0': context.scrollable
-            }
-        ]
+                'bg-surface-50 bottom-0 z-0': context.scrollable,
+            },
+        ],
     }),
     footer: {
         class: [
@@ -95,8 +95,8 @@ export default {
             // Color
             'bg-surface-50 dark:bg-surface-800',
             'border-surface-200 dark:border-surface-700',
-            'text-surface-700 dark:text-white/80'
-        ]
+            'text-surface-700 dark:text-white/80',
+        ],
     },
     column: {
         headercell: ({ context, props }) => ({
@@ -132,15 +132,15 @@ export default {
                 // Misc
                 { 'cursor-pointer': props.sortable === '' || props.sortable },
                 {
-                    'overflow-hidden space-nowrap border-y bg-clip-padding': context.resizable // Resizable
-                }
-            ]
+                    'overflow-hidden space-nowrap border-y bg-clip-padding': context.resizable, // Resizable
+                },
+            ],
         }),
         headercontent: {
-            class: 'flex items-center'
+            class: 'flex items-center',
         },
         sort: ({ context }) => ({
-            class: [context.sorted ? 'text-primary-500' : 'text-surface-700', context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80']
+            class: [context.sorted ? 'text-primary-500' : 'text-surface-700', context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80'],
         }),
         bodycell: ({ props, context, state, parent }) => ({
             class: [
@@ -163,8 +163,8 @@ export default {
                 { 'py-[0.6rem] px-2': state['d_editing'] },
 
                 // Color
-                'border-surface-200 dark:border-surface-700'
-            ]
+                'border-surface-200 dark:border-surface-700',
+            ],
         }),
         footercell: ({ context }) => ({
             class: [
@@ -184,11 +184,11 @@ export default {
                 // Color
                 'border-surface-200 dark:border-surface-700',
                 'text-surface-700 dark:text-white/80',
-                'bg-surface-50 dark:bg-surface-800'
-            ]
+                'bg-surface-50 dark:bg-surface-800',
+            ],
         }),
         sorticon: ({ context }) => ({
-            class: ['ml-2', context.sorted ? 'text-primary-highlight-inverse' : 'text-surface-700 dark:text-white/70']
+            class: ['ml-2', context.sorted ? 'text-primary-highlight-inverse' : 'text-surface-700 dark:text-white/70'],
         }),
         sortbadge: {
             class: [
@@ -206,11 +206,11 @@ export default {
 
                 // Color
                 'text-primary-highlight-inverse',
-                'bg-primary-highlight'
-            ]
+                'bg-primary-highlight',
+            ],
         },
         columnfilter: {
-            class: 'inline-flex items-center ml-auto'
+            class: 'inline-flex items-center ml-auto',
         },
         filteroverlay: {
             class: [
@@ -228,8 +228,8 @@ export default {
                 // Color
                 'bg-surface-0 dark:bg-surface-800',
                 'text-surface-800 dark:text-white/80',
-                'dark:border-surface-700'
-            ]
+                'dark:border-surface-700',
+            ],
         },
         filtermatchmodedropdown: {
             root: ({ state }) => ({
@@ -261,12 +261,12 @@ export default {
 
                     // Misc
                     'cursor-pointer',
-                    'select-none'
-                ]
-            })
+                    'select-none',
+                ],
+            }),
         },
         filterrowitems: {
-            class: 'm-0 p-0 py-3 list-none'
+            class: 'm-0 p-0 py-3 list-none',
         },
         filterrowitem: ({ context }) => ({
             class: [
@@ -301,8 +301,8 @@ export default {
                 // Misc
                 'cursor-pointer',
                 'overflow-hidden',
-                'whitespace-nowrap'
-            ]
+                'whitespace-nowrap',
+            ],
         }),
         filteroperator: {
             class: [
@@ -316,8 +316,8 @@ export default {
                 // Color
                 'text-surface-700 dark:text-white/80',
                 'border-surface-200 dark:border-surface-800',
-                'bg-surface-0 dark:bg-surface-700'
-            ]
+                'bg-surface-0 dark:bg-surface-700',
+            ],
         },
         filteroperatordropdown: {
             root: ({ state }) => ({
@@ -344,8 +344,8 @@ export default {
 
                     // Misc
                     'cursor-pointer',
-                    'select-none'
-                ]
+                    'select-none',
+                ],
             }),
             input: ({ props }) => ({
                 class: [
@@ -381,8 +381,8 @@ export default {
                     'cursor-pointer',
                     'overflow-hidden overflow-ellipsis',
                     'whitespace-nowrap',
-                    'appearance-none'
-                ]
+                    'appearance-none',
+                ],
             }),
             trigger: {
                 class: [
@@ -399,8 +399,8 @@ export default {
 
                     // Shape
                     'rounded-tr-md',
-                    'rounded-br-md'
-                ]
+                    'rounded-br-md',
+                ],
             },
             panel: {
                 class: [
@@ -415,8 +415,8 @@ export default {
                     // Color
                     'bg-surface-0 dark:bg-surface-800',
                     'text-surface-800 dark:text-white/80',
-                    'dark:border-surface-700'
-                ]
+                    'dark:border-surface-700',
+                ],
             },
             item: ({ context }) => ({
                 class: [
@@ -451,9 +451,9 @@ export default {
                     // Misc
                     'cursor-pointer',
                     'overflow-hidden',
-                    'whitespace-nowrap'
-                ]
-            })
+                    'whitespace-nowrap',
+                ],
+            }),
         },
         filterconstraint: {
             class: [
@@ -464,11 +464,11 @@ export default {
                 'border-b border-solid',
 
                 // Color
-                'border-surface-200 dark:border-surface-700'
-            ]
+                'border-surface-200 dark:border-surface-700',
+            ],
         },
         filteraddrule: {
-            class: 'py-3 px-5'
+            class: 'py-3 px-5',
         },
         filteraddrulebutton: {
             root: {
@@ -492,15 +492,15 @@ export default {
                     'transition duration-200 ease-in-out',
 
                     // Misc
-                    'cursor-pointer overflow-hidden select-none'
-                ]
+                    'cursor-pointer overflow-hidden select-none',
+                ],
             },
             label: {
-                class: 'flex-auto grow-0'
+                class: 'flex-auto grow-0',
             },
             icon: {
-                class: 'mr-2'
-            }
+                class: 'mr-2',
+            },
         },
         filterremovebutton: {
             root: {
@@ -524,15 +524,15 @@ export default {
                     'transition duration-200 ease-in-out',
 
                     // Misc
-                    'cursor-pointer overflow-hidden select-none'
-                ]
+                    'cursor-pointer overflow-hidden select-none',
+                ],
             },
             label: {
-                class: 'flex-auto grow-0'
+                class: 'flex-auto grow-0',
             },
             icon: {
-                class: 'mr-2'
-            }
+                class: 'mr-2',
+            },
         },
         filterbuttonbar: {
             class: [
@@ -540,8 +540,8 @@ export default {
                 'flex items-center justify-between',
 
                 // Space
-                'py-3 px-5'
-            ]
+                'py-3 px-5',
+            ],
         },
         filterclearbutton: {
             root: {
@@ -564,9 +564,9 @@ export default {
                     'transition duration-200 ease-in-out',
 
                     // Misc
-                    'cursor-pointer overflow-hidden select-none'
-                ]
-            }
+                    'cursor-pointer overflow-hidden select-none',
+                ],
+            },
         },
         filterapplybutton: {
             root: {
@@ -590,9 +590,9 @@ export default {
                     'transition duration-200 ease-in-out',
 
                     // Misc
-                    'cursor-pointer overflow-hidden select-none'
-                ]
-            }
+                    'cursor-pointer overflow-hidden select-none',
+                ],
+            },
         },
         filtermenubutton: ({ context }) => ({
             class: [
@@ -621,8 +621,8 @@ export default {
                 'transition duration-200',
 
                 // Misc
-                'cursor-pointer no-underline overflow-hidden'
-            ]
+                'cursor-pointer no-underline overflow-hidden',
+            ],
         }),
         headerfilterclearbutton: ({ context }) => ({
             class: [
@@ -644,9 +644,9 @@ export default {
                 // Misc
                 'cursor-pointer no-underline overflow-hidden select-none',
                 {
-                    invisible: !context.hidden
-                }
-            ]
+                    invisible: !context.hidden,
+                },
+            ],
         }),
         rowtoggler: {
             class: [
@@ -676,8 +676,8 @@ export default {
 
                 // Misc
                 'overflow-hidden',
-                'cursor-pointer select-none'
-            ]
+                'cursor-pointer select-none',
+            ],
         },
         columnresizer: {
             class: [
@@ -696,11 +696,11 @@ export default {
                 'border border-transparent',
 
                 // Misc
-                'cursor-col-resize'
-            ]
+                'cursor-col-resize',
+            ],
         },
         rowreordericon: {
-            class: 'cursor-move'
+            class: 'cursor-move',
         },
         roweditorinitbutton: {
             class: [
@@ -729,8 +729,8 @@ export default {
 
                 // Misc
                 'overflow-hidden',
-                'cursor-pointer select-none'
-            ]
+                'cursor-pointer select-none',
+            ],
         },
         roweditorsavebutton: {
             class: [
@@ -759,8 +759,8 @@ export default {
 
                 // Misc
                 'overflow-hidden',
-                'cursor-pointer select-none'
-            ]
+                'cursor-pointer select-none',
+            ],
         },
         roweditorcancelbutton: {
             class: [
@@ -789,8 +789,8 @@ export default {
 
                 // Misc
                 'overflow-hidden',
-                'cursor-pointer select-none'
-            ]
+                'cursor-pointer select-none',
+            ],
         },
         rowRadiobutton: {
             root: {
@@ -806,8 +806,8 @@ export default {
 
                     // Misc
                     'cursor-pointer',
-                    'select-none'
-                ]
+                    'select-none',
+                ],
             },
             box: ({ props }) => ({
                 class: [
@@ -830,7 +830,7 @@ export default {
                         'bg-surface-0 dark:bg-surface-900': !props.modelValue,
                         'border-surface-300 dark:border-surface-700': !props.modelValue,
                         'border-primary dark:border-primary': props.modelValue,
-                        'bg-primary dark:bg-primary': props.modelValue
+                        'bg-primary dark:bg-primary': props.modelValue,
                     },
 
                     // States
@@ -838,9 +838,9 @@ export default {
                         'peer-hover:border-primary': !props.disabled,
                         'peer-hover:border-primary-hover peer-hover:bg-primary-hover': !props.disabled && props.modelValue,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
-                        'opacity-60 cursor-default': props.disabled
-                    }
-                ]
+                        'opacity-60 cursor-default': props.disabled,
+                    },
+                ],
             }),
             input: {
                 class: [
@@ -867,8 +867,8 @@ export default {
 
                     // Misc
                     'appearance-none',
-                    'cursor-pointer'
-                ]
+                    'cursor-pointer',
+                ],
             },
             icon: ({ props }) => ({
                 class: [
@@ -886,13 +886,13 @@ export default {
                     // Conditions
                     {
                         'backface-hidden scale-10 invisible': !props.modelValue,
-                        'transform visible scale-[1.1]': props.modelValue
+                        'transform visible scale-[1.1]': props.modelValue,
                     },
 
                     // Transition
-                    'transition duration-200'
-                ]
-            })
+                    'transition duration-200',
+                ],
+            }),
         },
         headercheckbox: {
             root: {
@@ -909,8 +909,8 @@ export default {
 
                     // Misc
                     'cursor-pointer',
-                    'select-none'
-                ]
+                    'select-none',
+                ],
             },
             box: ({ props, context }) => ({
                 class: [
@@ -930,7 +930,7 @@ export default {
                     // Colors
                     {
                         'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
-                        'border-primary bg-primary': context.checked
+                        'border-primary bg-primary': context.checked,
                     },
 
                     // States
@@ -938,13 +938,13 @@ export default {
                         'peer-hover:border-primary': !props.disabled && !context.checked,
                         'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
-                        'cursor-default opacity-60': props.disabled
+                        'cursor-default opacity-60': props.disabled,
                     },
 
                     // Transitions
                     'transition-colors',
-                    'duration-200'
-                ]
+                    'duration-200',
+                ],
             }),
             input: {
                 class: [
@@ -971,8 +971,8 @@ export default {
 
                     // Misc
                     'appearance-none',
-                    'cursor-pointer'
-                ]
+                    'cursor-pointer',
+                ],
             },
             icon: {
                 class: [
@@ -988,9 +988,9 @@ export default {
 
                     // Transitions
                     'transition-all',
-                    'duration-200'
-                ]
-            }
+                    'duration-200',
+                ],
+            },
         },
         rowCheckbox: {
             root: {
@@ -1007,8 +1007,8 @@ export default {
 
                     // Misc
                     'cursor-pointer',
-                    'select-none'
-                ]
+                    'select-none',
+                ],
             },
             box: ({ props, context }) => ({
                 class: [
@@ -1028,7 +1028,7 @@ export default {
                     // Colors
                     {
                         'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
-                        'border-primary bg-primary': context.checked
+                        'border-primary bg-primary': context.checked,
                     },
 
                     // States
@@ -1036,13 +1036,13 @@ export default {
                         'peer-hover:border-primary': !props.disabled && !context.checked,
                         'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
-                        'cursor-default opacity-60': props.disabled
+                        'cursor-default opacity-60': props.disabled,
                     },
 
                     // Transitions
                     'transition-colors',
-                    'duration-200'
-                ]
+                    'duration-200',
+                ],
             }),
             input: {
                 class: [
@@ -1069,8 +1069,8 @@ export default {
 
                     // Misc
                     'appearance-none',
-                    'cursor-pointer'
-                ]
+                    'cursor-pointer',
+                ],
             },
             icon: {
                 class: [
@@ -1086,16 +1086,16 @@ export default {
 
                     // Transitions
                     'transition-all',
-                    'duration-200'
-                ]
-            }
+                    'duration-200',
+                ],
+            },
         },
         transition: {
             enterFromClass: 'opacity-0 scale-y-[0.8]',
             enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
             leaveActiveClass: 'transition-opacity duration-100 ease-linear',
-            leaveToClass: 'opacity-0'
-        }
+            leaveToClass: 'opacity-0',
+        },
     },
     bodyrow: ({ context, props }) => ({
         class: [
@@ -1114,17 +1114,17 @@ export default {
             { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover },
 
             // Misc
-            { 'cursor-pointer': props.selectionMode }
-        ]
+            { 'cursor-pointer': props.selectionMode },
+        ],
     }),
     rowexpansion: {
-        class: 'bg-surface-0 dark:bg-surface-800 text-surface-600 dark:text-white/80'
+        class: 'bg-surface-0 dark:bg-surface-800 text-surface-600 dark:text-white/80',
     },
     rowgroupheader: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800'],
     },
     rowgroupfooter: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800'],
     },
     rowgrouptoggler: {
         class: [
@@ -1154,13 +1154,13 @@ export default {
 
             // Misc
             'overflow-hidden',
-            'cursor-pointer select-none'
-        ]
+            'cursor-pointer select-none',
+        ],
     },
     rowgrouptogglericon: {
-        class: 'inline-block w-4 h-4'
+        class: 'inline-block w-4 h-4',
     },
     resizehelper: {
-        class: 'absolute hidden w-[2px] z-20 bg-primary'
-    }
+        class: 'absolute hidden w-[2px] z-20 bg-primary',
+    },
 };

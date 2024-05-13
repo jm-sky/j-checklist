@@ -11,10 +11,10 @@ export default {
             {
                 'px-4 py-3': props.size === null,
                 'text-sm py-2 px-3': props.size === 'small',
-                'text-xl py-3 px-4': props.size === 'large'
+                'text-xl py-3 px-4': props.size === 'large',
             },
             {
-                'w-12 p-0 py-3': props.label == null && props.icon !== null
+                'w-12 p-0 py-3': props.label == null && props.icon !== null,
             },
 
             // Shapes
@@ -44,7 +44,7 @@ export default {
             {
                 'text-primary-inverse': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
                 'bg-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'border border-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
+                'border border-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
             },
             // Primary Text Button
             { 'text-primary': props.text && props.severity === null && !props.plain },
@@ -55,7 +55,7 @@ export default {
             {
                 'text-white dark:text-surface-900': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
                 'bg-surface-500 dark:bg-surface-400': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
-                'border border-surface-500 dark:border-surface-400': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain
+                'border border-surface-500 dark:border-surface-400': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
             },
             // Secondary Text Button
             { 'text-surface-500 dark:text-surface-300': props.text && props.severity === 'secondary' && !props.plain },
@@ -66,7 +66,7 @@ export default {
             {
                 'text-white dark:text-green-900': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
                 'bg-green-500 dark:bg-green-400': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
-                'border border-green-500 dark:border-green-400': props.severity === 'success' && !props.text && !props.outlined && !props.plain
+                'border border-green-500 dark:border-green-400': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
             },
             // Success Text Button
             { 'text-green-500 dark:text-green-400': props.text && props.severity === 'success' && !props.plain },
@@ -77,7 +77,7 @@ export default {
             {
                 'text-white dark:text-surface-900': props.severity === 'info' && !props.text && !props.outlined && !props.plain,
                 'bg-blue-500 dark:bg-blue-400': props.severity === 'info' && !props.text && !props.outlined && !props.plain,
-                'border border-blue-500 dark:border-blue-400': props.severity === 'info' && !props.text && !props.outlined && !props.plain
+                'border border-blue-500 dark:border-blue-400': props.severity === 'info' && !props.text && !props.outlined && !props.plain,
             },
             // Info Text Button
             { 'text-blue-500 dark:text-blue-400': props.text && props.severity === 'info' && !props.plain },
@@ -88,7 +88,7 @@ export default {
             {
                 'text-white dark:text-surface-900': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
                 'bg-orange-500 dark:bg-orange-400': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
-                'border border-orange-500 dark:border-orange-400': props.severity === 'warning' && !props.text && !props.outlined && !props.plain
+                'border border-orange-500 dark:border-orange-400': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
             },
             // Warning Text Button
             { 'text-orange-500 dark:text-orange-400': props.text && props.severity === 'warning' && !props.plain },
@@ -99,7 +99,7 @@ export default {
             {
                 'text-white dark:text-surface-900': props.severity === 'help' && !props.text && !props.outlined && !props.plain,
                 'bg-purple-500 dark:bg-purple-400': props.severity === 'help' && !props.text && !props.outlined && !props.plain,
-                'border border-purple-500 dark:border-purple-400': props.severity === 'help' && !props.text && !props.outlined && !props.plain
+                'border border-purple-500 dark:border-purple-400': props.severity === 'help' && !props.text && !props.outlined && !props.plain,
             },
             // Help Text Button
             { 'text-purple-500 dark:text-purple-400': props.text && props.severity === 'help' && !props.plain },
@@ -110,7 +110,7 @@ export default {
             {
                 'text-white dark:text-surface-900': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
                 'bg-red-500 dark:bg-red-400': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
-                'border border-red-500 dark:border-red-400': props.severity === 'danger' && !props.text && !props.outlined && !props.plain
+                'border border-red-500 dark:border-red-400': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
             },
             // Danger Text Button
             { 'text-red-500 dark:text-red-400': props.text && props.severity === 'danger' && !props.plain },
@@ -120,7 +120,7 @@ export default {
             {
                 'text-white dark:text-surface-900': props.severity === 'contrast' && !props.text && !props.outlined && !props.plain,
                 'bg-surface-900 dark:bg-surface-0': props.severity === 'contrast' && !props.text && !props.outlined && !props.plain,
-                'border border-surface-900 dark:border-surface-0': props.severity === 'contrast' && !props.text && !props.outlined && !props.plain
+                'border border-surface-900 dark:border-surface-0': props.severity === 'contrast' && !props.text && !props.outlined && !props.plain,
             },
             // Contrast Text Button
             { 'text-surface-900 dark:text-surface-0': props.text && props.severity === 'contrast' && !props.plain },
@@ -191,18 +191,18 @@ export default {
             'transition duration-200 ease-in-out',
 
             // Misc
-            'cursor-pointer overflow-hidden select-none'
-        ]
+            'cursor-pointer overflow-hidden select-none',
+        ],
     }),
     label: ({ props }) => ({
         class: [
             'duration-200',
             'font-bold',
             {
-                'hover:underline': props.link
+                'hover:underline': props.link,
             },
-            { 'flex-1': props.label !== null, 'invisible w-0': props.label == null }
-        ]
+            { 'flex-1': props.label !== null, 'invisible w-0': props.label == null },
+        ],
     }),
     icon: ({ props }) => ({
         class: [
@@ -211,9 +211,9 @@ export default {
                 'mr-2': props.iconPos == 'left' && props.label != null,
                 'ml-2 order-1': props.iconPos == 'right' && props.label != null,
                 'mb-2': props.iconPos == 'top' && props.label != null,
-                'mt-2': props.iconPos == 'bottom' && props.label != null
-            }
-        ]
+                'mt-2': props.iconPos == 'bottom' && props.label != null,
+            },
+        ],
     }),
     loadingicon: ({ props }) => ({
         class: [
@@ -223,12 +223,12 @@ export default {
                 'mr-2': props.iconPos == 'left' && props.label != null,
                 'ml-2 order-1': props.iconPos == 'right' && props.label != null,
                 'mb-2': props.iconPos == 'top' && props.label != null,
-                'mt-2': props.iconPos == 'bottom' && props.label != null
+                'mt-2': props.iconPos == 'bottom' && props.label != null,
             },
-            'animate-spin'
-        ]
+            'animate-spin',
+        ],
     }),
     badge: ({ props }) => ({
-        class: [{ 'ml-2 w-4 h-4 leading-none flex items-center justify-center': props.badge }]
-    })
+        class: [{ 'ml-2 w-4 h-4 leading-none flex items-center justify-center': props.badge }],
+    }),
 };

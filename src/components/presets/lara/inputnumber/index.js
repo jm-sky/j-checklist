@@ -12,8 +12,8 @@ export default {
             { 'first:ml-0 -ml-px': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             //Sizing
-            { '!w-16': props.showButtons && props.buttonLayout == 'vertical' }
-        ]
+            { '!w-16': props.showButtons && props.buttonLayout == 'vertical' },
+        ],
     }),
     input: {
         root: ({ parent, context }) => ({
@@ -60,16 +60,16 @@ export default {
                 { filled: parent.instance?.$parentInstance?.$name == 'FloatLabel' && parent.state.d_modelValue !== null },
 
                 //Position
-                { 'order-2': parent.props.buttonLayout == 'horizontal' || parent.props.buttonLayout == 'vertical' }
-            ]
-        })
+                { 'order-2': parent.props.buttonLayout == 'horizontal' || parent.props.buttonLayout == 'vertical' },
+            ],
+        }),
     },
     buttongroup: ({ props }) => ({
         class: [
             // Flex
             'flex',
-            'flex-col'
-        ]
+            'flex-col',
+        ],
     }),
 
     incrementbutton: {
@@ -110,12 +110,12 @@ export default {
                 'hover:bg-primary-hover hover:border-primary-hover',
 
                 //Misc
-                'cursor-pointer overflow-hidden select-none'
-            ]
+                'cursor-pointer overflow-hidden select-none',
+            ],
         }),
         label: {
-            class: 'h-0 w-0'
-        }
+            class: 'h-0 w-0',
+        },
     },
     decrementbutton: {
         root: ({ parent }) => ({
@@ -155,11 +155,11 @@ export default {
                 'hover:bg-primary-hover hover:border-primary-hover',
 
                 //Misc
-                'cursor-pointer overflow-hidden select-none'
-            ]
+                'cursor-pointer overflow-hidden select-none',
+            ],
         }),
         label: {
-            class: 'h-0 w-0'
-        }
-    }
+            class: 'h-0 w-0',
+        },
+    },
 };

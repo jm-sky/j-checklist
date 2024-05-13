@@ -25,7 +25,7 @@ export default {
             {
                 'hover:border-primary': !context.disabled && !props.invalid,
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                'opacity-60 select-none pointer-events-none cursor-default': context.disabled,
             },
 
             // Filled State *for FloatLabel
@@ -33,7 +33,7 @@ export default {
 
             // Misc
             'appearance-none',
-            'transition-colors duration-200'
-        ]
-    })
+            'transition-colors duration-200',
+        ],
+    }),
 };

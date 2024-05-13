@@ -3,8 +3,8 @@ export default {
         class: [
             // Alignment
             'flex items-center',
-            'gap-2'
-        ]
+            'gap-2',
+        ],
     },
     input: {
         root: ({ props, context, parent }) => ({
@@ -19,7 +19,7 @@ export default {
                 // Spacing
                 'm-0',
                 {
-                    'p-3': props.size == null
+                    'p-3': props.size == null,
                 },
 
                 // Size
@@ -47,7 +47,7 @@ export default {
                 {
                     'hover:border-primary': !context.disabled && !props.invalid,
                     'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50 focus:z-10': !context.disabled,
-                    'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                    'opacity-60 select-none pointer-events-none cursor-default': context.disabled,
                 },
 
                 // Filled State *for FloatLabel
@@ -55,8 +55,8 @@ export default {
 
                 // Misc
                 'appearance-none',
-                'transition-colors duration-200'
-            ]
-        })
-    }
+                'transition-colors duration-200',
+            ],
+        }),
+    },
 };

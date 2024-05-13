@@ -7,8 +7,8 @@ export default {
 
             // Shape
             'rounded-md',
-            { 'shadow-lg': props.raised }
-        ]
+            { 'shadow-lg': props.raised },
+        ],
     }),
     button: {
         root: ({ parent, props }) => ({
@@ -23,10 +23,10 @@ export default {
                 {
                     'px-4 py-3': parent.props.size === null,
                     'text-sm py-2 px-3': parent.props.size === 'small',
-                    'text-xl py-3 px-4': parent.props.size === 'large'
+                    'text-xl py-3 px-4': parent.props.size === 'large',
                 },
                 {
-                    'min-w-12 p-0 py-3': parent.props.label == null && parent.props.icon !== null
+                    'min-w-12 p-0 py-3': parent.props.label == null && parent.props.icon !== null,
                 },
 
                 // Shape
@@ -57,7 +57,7 @@ export default {
                 {
                     'text-primary-inverse': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Primary Text Button
                 { 'text-primary': props.text && props.severity === null && !props.plain },
@@ -68,7 +68,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-surface-500 dark:bg-surface-400': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-surface-500 dark:border-surface-400': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-surface-500 dark:border-surface-400': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Secondary Text Button
                 { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'secondary' && !parent.props.plain },
@@ -79,7 +79,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-green-500 dark:bg-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-green-500 dark:border-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-green-500 dark:border-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Success Text Button
                 { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'secondary' && !parent.props.plain },
@@ -90,7 +90,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-blue-500 dark:bg-blue-400': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-blue-500 dark:border-blue-400': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-blue-500 dark:border-blue-400': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Info Text Button
                 { 'text-blue-500 dark:text-blue-400': parent.props.text && parent.props.severity === 'info' && !parent.props.plain },
@@ -101,7 +101,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-orange-500 dark:bg-orange-400': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-orange-500 dark:border-orange-400': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-orange-500 dark:border-orange-400': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Warning Text Button
                 { 'text-orange-500 dark:text-orange-400': parent.props.text && parent.props.severity === 'warning' && !parent.props.plain },
@@ -112,7 +112,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-purple-500 dark:bg-purple-400': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-purple-500 dark:border-purple-400': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-purple-500 dark:border-purple-400': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Help Text Button
                 { 'text-purple-500 dark:text-purple-400': parent.props.text && parent.props.severity === 'help' && !parent.props.plain },
@@ -123,7 +123,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-red-500 dark:bg-red-400': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-red-500 dark:border-red-400': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-red-500 dark:border-red-400': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Danger Text Button
                 { 'text-red-500 dark:text-red-400': parent.props.text && parent.props.severity === 'danger' && !parent.props.plain },
@@ -133,7 +133,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-surface-900 dark:bg-surface-0': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-surface-900 dark:border-surface-0': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-surface-900 dark:border-surface-0': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Contrast Text Button
                 { 'text-surface-900 dark:text-surface-0': props.text && props.severity === 'contrast' && !props.plain },
@@ -201,15 +201,15 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // Misc
-                'cursor-pointer overflow-hidden select-none'
-            ]
+                'cursor-pointer overflow-hidden select-none',
+            ],
         }),
         icon: {
             class: [
                 // Margins
-                'mr-2'
-            ]
-        }
+                'mr-2',
+            ],
+        },
     },
     menubutton: {
         root: ({ parent, props }) => ({
@@ -223,10 +223,10 @@ export default {
                 {
                     'px-4 py-3': parent.props.size === null,
                     'text-sm py-2 px-3': parent.props.size === 'small',
-                    'text-xl py-3 px-4': parent.props.size === 'large'
+                    'text-xl py-3 px-4': parent.props.size === 'large',
                 },
                 {
-                    'min-w-12 p-0 py-3': parent.props.label == null && parent.props.icon !== null
+                    'min-w-12 p-0 py-3': parent.props.label == null && parent.props.icon !== null,
                 },
 
                 // Shape
@@ -256,7 +256,7 @@ export default {
                 {
                     'text-primary-inverse': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Primary Text Button
                 { 'text-primary': props.text && props.severity === null && !props.plain },
@@ -267,7 +267,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-surface-500 dark:bg-surface-400': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-surface-500 dark:border-surface-400': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-surface-500 dark:border-surface-400': parent.props.severity === 'secondary' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Secondary Text Button
                 { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'secondary' && !parent.props.plain },
@@ -278,7 +278,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-green-500 dark:bg-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-green-500 dark:border-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-green-500 dark:border-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Success Text Button
                 { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'secondary' && !parent.props.plain },
@@ -289,7 +289,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-blue-500 dark:bg-blue-400': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-blue-500 dark:border-blue-400': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-blue-500 dark:border-blue-400': parent.props.severity === 'info' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Info Text Button
                 { 'text-blue-500 dark:text-blue-400': parent.props.text && parent.props.severity === 'info' && !parent.props.plain },
@@ -300,7 +300,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-orange-500 dark:bg-orange-400': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-orange-500 dark:border-orange-400': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-orange-500 dark:border-orange-400': parent.props.severity === 'warning' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Warning Text Button
                 { 'text-orange-500 dark:text-orange-400': parent.props.text && parent.props.severity === 'warning' && !parent.props.plain },
@@ -311,7 +311,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-purple-500 dark:bg-purple-400': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-purple-500 dark:border-purple-400': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-purple-500 dark:border-purple-400': parent.props.severity === 'help' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Help Text Button
                 { 'text-purple-500 dark:text-purple-400': parent.props.text && parent.props.severity === 'help' && !parent.props.plain },
@@ -322,7 +322,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-red-500 dark:bg-red-400': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-red-500 dark:border-red-400': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-red-500 dark:border-red-400': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Danger Text Button
                 { 'text-red-500 dark:text-red-400': parent.props.text && parent.props.severity === 'danger' && !parent.props.plain },
@@ -332,7 +332,7 @@ export default {
                 {
                     'text-white dark:text-surface-900': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-surface-900 dark:bg-surface-0': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-surface-900 dark:border-surface-0': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'border border-surface-900 dark:border-surface-0': parent.props.severity === 'contrast' && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                 },
                 // Contrast Text Button
                 { 'text-surface-900 dark:text-surface-0': props.text && props.severity === 'contrast' && !props.plain },
@@ -401,12 +401,12 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // Misc
-                'cursor-pointer overflow-hidden select-none'
-            ]
+                'cursor-pointer overflow-hidden select-none',
+            ],
         }),
         label: {
-            class: ['hidden']
-        }
+            class: ['hidden'],
+        },
     },
     menu: {
         root: {
@@ -420,8 +420,8 @@ export default {
 
                 // Colors
                 'bg-surface-0 dark:bg-surface-700',
-                'border border-surface-200 dark:border-surface-700'
-            ]
+                'border border-surface-200 dark:border-surface-700',
+            ],
         },
         menu: {
             class: [
@@ -429,14 +429,14 @@ export default {
                 'list-none',
                 'm-0',
                 'p-0',
-                'outline-none'
-            ]
+                'outline-none',
+            ],
         },
         menuitem: {
             class: [
                 // Position
-                'relative'
-            ]
+                'relative',
+            ],
         },
         content: ({ context }) => ({
             class: [
@@ -447,19 +447,19 @@ export default {
                 {
                     'text-surface-500 dark:text-white/70': !context.focused && !context.active,
                     'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
-                    'text-primary-highlight-inverse bg-primary-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active)
+                    'text-primary-highlight-inverse bg-primary-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active),
                 },
 
                 // Hover States
                 {
                     'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
-                    'hover:bg-primary-highlight-hover text-primary-highlight-inverse': context.active
+                    'hover:bg-primary-highlight-hover text-primary-highlight-inverse': context.active,
                 },
 
                 // Transitions
                 'transition-shadow',
-                'duration-200'
-            ]
+                'duration-200',
+            ],
         }),
         action: {
             class: [
@@ -480,8 +480,8 @@ export default {
                 'no-underline',
                 'overflow-hidden',
                 'cursor-pointer',
-                'select-none'
-            ]
+                'select-none',
+            ],
         },
         icon: {
             class: [
@@ -489,17 +489,17 @@ export default {
                 'mr-2',
 
                 // Color
-                'text-surface-600 dark:text-white/70'
-            ]
+                'text-surface-600 dark:text-white/70',
+            ],
         },
         label: {
-            class: ['leading-none']
+            class: ['leading-none'],
         },
         submenuicon: {
             class: [
                 // Position
-                'ml-auto'
-            ]
+                'ml-auto',
+            ],
         },
         submenu: {
             class: [
@@ -520,11 +520,11 @@ export default {
                 'z-10',
 
                 // Color
-                'bg-surface-0 dark:bg-surface-700'
-            ]
+                'bg-surface-0 dark:bg-surface-700',
+            ],
         },
         separator: {
-            class: 'border-t border-surface-200 dark:border-surface-600 my-1'
-        }
-    }
+            class: 'border-t border-surface-200 dark:border-surface-600 my-1',
+        },
+    },
 };

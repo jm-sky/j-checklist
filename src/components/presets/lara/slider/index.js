@@ -13,8 +13,8 @@ export default {
             'bg-surface-100 dark:bg-surface-700',
 
             // States
-            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
-        ]
+            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled },
+        ],
     }),
     range: ({ props }) => ({
         class: [
@@ -22,18 +22,18 @@ export default {
             'block absolute',
             {
                 'top-0 left-0': props.orientation == 'horizontal',
-                'bottom-0 left-0': props.orientation == 'vertical'
+                'bottom-0 left-0': props.orientation == 'vertical',
             },
 
             //Size
             {
                 'h-full': props.orientation == 'horizontal',
-                'w-full': props.orientation == 'vertical'
+                'w-full': props.orientation == 'vertical',
             },
 
             // Colors
-            'bg-primary'
-        ]
+            'bg-primary',
+        ],
     }),
     handle: ({ props }) => ({
         class: [
@@ -44,7 +44,7 @@ export default {
             'w-[1.143rem]',
             {
                 'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'vertical'
+                'left-[50%] mb-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'vertical',
             },
 
             // Shape
@@ -65,8 +65,8 @@ export default {
 
             // Misc
             'cursor-grab',
-            'touch-action-none'
-        ]
+            'touch-action-none',
+        ],
     }),
     starthandler: ({ props }) => ({
         class: [
@@ -77,7 +77,7 @@ export default {
             'w-[1.143rem]',
             {
                 'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical'
+                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical',
             },
 
             // Shape
@@ -98,8 +98,8 @@ export default {
 
             // Misc
             'cursor-grab',
-            'touch-action-none'
-        ]
+            'touch-action-none',
+        ],
     }),
     endhandler: ({ props }) => ({
         class: [
@@ -110,7 +110,7 @@ export default {
             'w-[1.143rem]',
             {
                 'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical'
+                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical',
             },
 
             // Shape
@@ -131,7 +131,7 @@ export default {
 
             // Misc
             'cursor-grab',
-            'touch-action-none'
-        ]
-    })
+            'touch-action-none',
+        ],
+    }),
 };

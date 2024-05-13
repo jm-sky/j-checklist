@@ -5,9 +5,9 @@ export default {
             'w-12 h-7',
             'rounded-2xl',
             {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
-            }
-        ]
+                'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+            },
+        ],
     }),
     slider: ({ props }) => ({
         class: [
@@ -30,7 +30,7 @@ export default {
             'border',
             {
                 'bg-surface-200 dark:bg-surface-700': !(props.modelValue == props.trueValue),
-                'bg-primary': props.modelValue == props.trueValue
+                'bg-primary': props.modelValue == props.trueValue,
             },
 
             { 'border-transparent': !props.invalid },
@@ -47,8 +47,8 @@ export default {
             'transition-colors duration-200',
 
             // Misc
-            'cursor-pointer'
-        ]
+            'cursor-pointer',
+        ],
     }),
     input: {
         class: [
@@ -74,7 +74,7 @@ export default {
 
             // Misc
             'appearance-none',
-            'cursor-pointer'
-        ]
-    }
+            'cursor-pointer',
+        ],
+    },
 };
