@@ -53,9 +53,10 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
   <div
     ref="itemRef"
     :class="[
-      { 'scale-105 ring ring-brand': isEditing },
+      { 'scale-105 ring ring-destructive': isEditing && task.isOverdue },
+      { 'scale-105 ring ring-brand': isEditing && !task.isOverdue },
       { 'opacity-50': task.isDone },
-      task.isOverdue ? 'bg-red-800/40 border-red-500/50 hover:ring-red-500' : 'border-theme bg-theme hover:ring-brand',
+      task.isOverdue ? 'bg-red-800/40 border-destructive-dark/50 hover:ring-destructive-dark/50' : 'border-theme bg-theme hover:ring-brand',
     ]"
     class="group flex flex-row gap-3 items-center justify-between border px-3 py-2.5 rounded-lg shadow-lg relative  hover:ring"
   >
@@ -108,18 +109,18 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
       />
       <DateButton
         v-model="draft.dueDate"
-        :class="task.isOverdue ? 'text-red-600' : 'text-brand'"
+        :class="task.isOverdue ? 'text-red-600' : 'text-primary'"
         label="Task due date"
       />
     </div>
     
     <div
       :class="{ 'opacity-0': !isEditing }"
-      class="flex flex-row gap-3 text-sm items-center group-hover:opacity-100 transition-opacity delay-300 group-hover:delay-0"
+      class="flex flex-row gap-1 text-sm items-center group-hover:opacity-100 transition-opacity delay-300 group-hover:delay-0"
     >
       <template v-if="isEditing">
         <button
-          class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
+          class="rounded py-1 px-2 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
           data-tooltip="Cancel"
           aria-label="Cancel"
           @click="toggleEditing()"
@@ -130,7 +131,7 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
           />
         </button>
         <button
-          class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
+          class="rounded py-1 px-2 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
           data-tooltip="Save"
           aria-label="Save"
           @click="save()"
@@ -143,7 +144,7 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
       </template>
       <template v-else>
         <button
-          class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
+          class="rounded py-1 px-2 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
           data-tooltip="Edit"
           aria-label="Edit"
           @click="toggleEditing()"
@@ -154,7 +155,7 @@ const doneButtonLabel = computed(() => task.value.isDone ? 'Mark as undone' : 'M
           />
         </button>
         <button
-          class="rounded p-1 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
+          class="rounded py-1 px-2 cursor-pointer text-white/85 hover:text-white hover:bg-white/10"
           data-tooltip="Delete"
           aria-label="Delete"
           @click="emit('delete')"

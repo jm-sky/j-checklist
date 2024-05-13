@@ -14,11 +14,19 @@ const tasksDone = computed<Task[]>(() => tasks.value.filter(task => task.isDone)
 
 <template>
   <div class="task-list flex flex-col gap-4">
-    <TaskListHeader :total="tasks.length" :total-done="tasksDone.length" />
+    <TaskListHeader
+      :total="tasks.length"
+      :total-done="tasksDone.length"
+    />
 
     <TaskListForm v-model:tasks="tasks" />
 
-    <div v-if="!tasksSorted?.length" class="p-5 border border-gray-400/50 bg-black/15 rounded-lg font-light text-sm opacity-75">You have no tasks...</div>
+    <div
+      v-if="!tasksSorted?.length"
+      class="p-5 border border-gray-400/50 bg-black/15 rounded-lg font-light text-sm opacity-75"
+    >
+      You have no tasks...
+    </div>
 
     <TransitionGroup
       enter-active-class="transform-gpu"

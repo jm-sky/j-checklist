@@ -3,7 +3,8 @@ const { defineConfig } = require('eslint-define-config');
 /* eslint-env node */
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-module.exports = defineConfig ({
+module.exports = defineConfig({
+  ignorePatterns: ['dev-dist/*'],
   root: true,
   'extends': [
     'plugin:vue/vue3-essential',
@@ -19,6 +20,7 @@ module.exports = defineConfig ({
     'semi': ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
     'eol-last': ['error', 'always'],
+    'vue/require-default-prop': 'off',
     'sort-imports': ['error', {
         'ignoreCase': true,
         'ignoreDeclarationSort': true,

@@ -2,11 +2,11 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { ref } from 'vue';
-import Button from 'primevue/button';
 import { onClickOutside } from '@vueuse/core';
 import { useI18n } from 'vue-i18n';
 import DateButton from './DateButton.vue';
 import InputText from './InputText.vue';
+import UIButton from './ui/button/UIButton.vue';
 import { Task, type ITaskInitData } from '@/models/task.model';
 
 const { t } = useI18n();
@@ -63,17 +63,17 @@ const onSubmit = () => {
           aria-label="New task title"
           @focus="expand()"
         />
-        <Button
+        <UIButton
           type="submit"
           :disabled="!newTask?.title.length"
-          class="shadow flex items-center justify-center aspect-square p-3 rounded-lg font-bold text-sm cursor-pointer bg-brand/50 hover:opacity-75 disabled:opacity-50 disabled:cursor-not-allowed"
+          class="shadow flex aspect-square p-3 rounded-lg"
           aria-label="Add new task"
         >
           <FontAwesomeIcon
             :icon="faPlus"
             fixed-width
           />
-        </Button>
+        </UIButton>
       </div>
       <div
         v-if="isExpanded"

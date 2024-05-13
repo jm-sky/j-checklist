@@ -20,12 +20,12 @@ if (!self.define) {
   let nextDefineUri;
 
   const singleRequire = (uri, parentUri) => {
-    uri = new URL(uri + ".js", parentUri).href;
+    uri = new URL(uri + '.js', parentUri).href;
     return registry[uri] || (
       
         new Promise(resolve => {
-          if ("document" in self) {
-            const script = document.createElement("script");
+          if ('document' in self) {
+            const script = document.createElement('script');
             script.src = uri;
             script.onload = resolve;
             document.head.appendChild(script);
@@ -47,7 +47,7 @@ if (!self.define) {
   };
 
   self.define = (depsNames, factory) => {
-    const uri = nextDefineUri || ("document" in self ? document.currentScript.src : "") || location.href;
+    const uri = nextDefineUri || ('document' in self ? document.currentScript.src : '') || location.href;
     if (registry[uri]) {
       // Module is already loading or loaded.
       return;
@@ -57,10 +57,10 @@ if (!self.define) {
     const specialDeps = {
       module: { uri },
       exports,
-      require
+      require,
     };
     registry[uri] = Promise.all(depsNames.map(
-      depName => specialDeps[depName] || require(depName)
+      depName => specialDeps[depName] || require(depName),
     )).then(deps => {
       factory(...deps);
       return exports;
@@ -78,15 +78,15 @@ define(['./workbox-5199072c'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "registerSW.js",
-    "revision": "3ca0b8505b4bec776b69afdba2768812"
+    'url': 'registerSW.js',
+    'revision': '3ca0b8505b4bec776b69afdba2768812',
   }, {
-    "url": "index.html",
-    "revision": "0.t3vgi1baea"
+    'url': 'index.html',
+    'revision': '0.ei3to9tnk8o',
   }], {});
   workbox.cleanupOutdatedCaches();
-  workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html"), {
-    allowlist: [/^\/$/]
+  workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL('index.html'), {
+    allowlist: [/^\/$/],
   }));
 
 }));

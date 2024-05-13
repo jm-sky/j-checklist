@@ -1,0 +1,18 @@
+@layer base {
+  body {
+    --bg-start: var(--color-black);
+    --bg-end: color-mix(in hsl, hsl(var(--color-primary-950)), black 30%);
+    --bg-light: var(--color-white);
+  
+    color: hsl(204, 80%, 16%);
+  
+    @apply min-h-screen bg-black text-white overflow-x-hidden;
+  
+    background: linear-gradient(to bottom, transparent, var(--bg-end)), var(--bg-start)
+                conic-gradient(at 50% -1rem,
+                  color-mix(in hsl, var(--bg-start), transparent 50%),
+                  color-mix(in hsl, var(--bg-light), transparent 50%),
+                  color-mix(in hsl, var(--bg-start), transparent 50%)
+                );
+  }
+}
