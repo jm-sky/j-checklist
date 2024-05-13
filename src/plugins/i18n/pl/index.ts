@@ -8,5 +8,6 @@ export const pl = {
   ui,
   task: {
     title: 'Title',
+    dueDate: 'Termin',
   },
 };

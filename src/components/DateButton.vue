@@ -22,15 +22,28 @@ const openCalendar = () => dateRef.value?.showPicker();
 <template>
   <button
     type="button"
-    class="flex items-center justify-center px-3 py-2 rounded-lg text-sm border border-current/50 hover:bg-black/15 transition-colors cursor-pointer"
+    class="flex items-center justify-center px-3 py-2 rounded-lg text-sm border border-current hover:bg-black/15 transition-colors cursor-pointer"
     :aria-label="`${label} picker`"
     @click="openCalendar"
   >
-    <div v-if="value" class="text-sm whitespace-nowrap font-light text-white mr-2 leading-tight grow">
+    <div
+      v-if="value"
+      class="text-sm whitespace-nowrap font-light text-white mr-2 leading-tight grow"
+    >
       {{ dayjs(value).toDate().toDateString() }}
     </div>
-    <input v-model="value" type="date" class="w-0 h-0 border-0 outline-0" ref="dateRef" :aria-label="`${label} input`">
-    <FontAwesomeIcon :icon="faCalendar" class="text-white" fixed-width />
+    <input
+      ref="dateRef"
+      v-model="value"
+      type="date"
+      class="w-0 h-0 border-0 outline-0"
+      :aria-label="`${label} input`"
+    >
+    <FontAwesomeIcon
+      :icon="faCalendar"
+      class="text-current"
+      fixed-width
+    />
   </button>
 </template>
 

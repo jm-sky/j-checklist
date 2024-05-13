@@ -8,5 +8,6 @@ export const en = {
   ui,
   task: {
     title: 'Title',
+    dueDate: 'Due date',
   },
 };

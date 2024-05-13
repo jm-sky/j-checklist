@@ -43,8 +43,8 @@ export default {
             // Primary Button
             {
                 'text-primary-inverse': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'bg-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'border border-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'bg-primary/75': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'border border-primary/50': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
             },
             // Primary Text Button
             { 'text-primary': props.text && props.severity === null && !props.plain },
